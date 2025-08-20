@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALP Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f5f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+    .search-bar input {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      font-size: 16px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav button {
+      background: #fff;
+      border: 1px solid #ccc;
+      margin: 5px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #4CAF50;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- دلته د ALP لوګو واچوئ -->
+    <img src="https://via.placeholder.com/40?text=A" alt="ALP Logo">
+    <h1>ALP Store</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search apps & games...">
+  </div>
+
+  <nav>
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('games')">Games</button>
+    <button onclick="filterCategory('apps')">Apps</button>
+    <button onclick="filterCategory('tools')">Tools</button>
+  </nav>
+
+  <div class="container" id="storeContainer">
+    <!-- Game 1 -->
+    <div class="card games">
+      <img src="https://via.placeholder.com/100" alt="PUBG">
+      <h3>PUBG Mobile</h3>
+      <p>Size: 1.5GB</p>
+      <a class="download-btn" href="YOUR_DOWNLOAD_LINK">Download</a>
+    </div>
+
+    <!-- Game 2 -->
+    <div class="card games">
+      <img src="https://via.placeholder.com/100" alt="Free Fire">
+      <h3>Free Fire</h3>
+      <p>Size: 500MB</p>
+      <a class="download-btn" href="YOUR_DOWNLOAD_LINK">Download</a>
+    </div>
+
+    <!-- App 3 -->
+    <div class="card apps">
+      <img src="https://via.placeholder.com/100" alt="Spotify">
+      <h3>Spotify APK</h3>
+      <p>Size: 100MB</p>
+      <a class="download-btn" href="YOUR_DOWNLOAD_LINK">Download</a>
+    </div>
+
+    <!-- Tool 4 -->
+    <div class="card tools">
+      <img src="https://via.placeholder.com/100" alt="Cleaner">
+      <h3>Phone Cleaner</h3>
+      <p>Size: 20MB</p>
+      <a class="download-btn" href="YOUR_DOWNLOAD_LINK">Download</a>
+    </div>
+  </div>
+
+  <script>
+    // 🔍 Search function
+    document.getElementById("searchInput").add
